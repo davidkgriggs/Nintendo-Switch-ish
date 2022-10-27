@@ -27,87 +27,18 @@
                                         <Image RenderOptions.BitmapScalingMode="Fant" Source="{ThemeFile 'Images/Blank.png'}" Height="125" Width="125" 
                                                VerticalAlignment="Top" HorizontalAlignment="Center" Margin="0,0,0,0"/>
                                         
-                                        <Grid x:Name="ThemeModifierPath" Tag="{DynamicResource DKGThemeModifierPath}">
-                                            <Grid.Style>
-                                               <Style TargetType="Grid">
-                                                   <Setter Property="Visibility" Value="Visible"/>
-                                                   <Style.Triggers>
-                                                       <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value=".">
-                                                           <Setter Property="Visibility" Value="Collapsed"/>
-                                                       </DataTrigger>
-                                                   </Style.Triggers>
-                                               </Style>
-                                            </Grid.Style>
-							                <TextBlock Name="LogoPathModifier" Tag="{Binding Name}" Visibility="Collapsed">
-                                                <TextBlock.Style>
-                                                    <Style TargetType="TextBlock">
-                                                        <Setter Property="Text">
-                                                            <Setter.Value>
-                                                                <MultiBinding StringFormat="{}{0}{1}{2}{3}">
-                                                                    <Binding ElementName="ThemeModifierPath" Path="Tag" />
-                                                                    <Binding Source="/FilterPresets/Icons/"/>
-                                                                    <Binding RelativeSource="{RelativeSource Self}" Path="Tag" />
-                                                                    <Binding Source=".png"/>
-                                                                </MultiBinding>
-                                                            </Setter.Value>
-                                                        </Setter>
-                                                    </Style>
-                                                </TextBlock.Style>
-                                            </TextBlock>
-                                            <Image Name="LogoImageModifier" MaxWidth="60" MaxHeight="60" Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" Margin="5,0,0,0"
-                                                   VerticalAlignment="Center" HorizontalAlignment="Center" Source="{Binding ElementName=LogoPathModifier, Path=Text}"/>
-                                        </Grid>
-                                                                    
-                                        <Grid Tag="{DynamicResource DKGThemeModifierPath}">
-                                            <Grid.Style>
-                                               <Style TargetType="Grid">
-                                                   <Setter Property="Visibility" Value="Collapsed"/>
-                                                   <Style.Triggers>
-                                                       <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value=".">
-                                                           <Setter Property="Visibility" Value="Visible"/>
-                                                       </DataTrigger>
-                                                   </Style.Triggers>
-                                               </Style>
-                                            </Grid.Style>
-                                            <TextBlock Text="&#59633;" FontFamily="Segoe MDL2 Assets" FontSize="50" Foreground="White" Margin="7.5,0,0,0" 
-                                                       HorizontalAlignment="Center" VerticalAlignment="Center">
+                                        <Image x:Name="FilterIcon" RenderOptions.BitmapScalingMode="Fant" Margin="5,0,0,0" 
+                                               Height="60" Width="60" HorizontalAlignment="Center" VerticalAlignment="Center"
+						                       Source="{ThemeFileBinding Name, PathFormat='FilterIcons/{0}.png'}"/>
+                                                                                                            
+                                        <Grid>
+                                            <TextBlock Text="&#xE71C;" FontFamily="Segoe MDL2 Assets" FontSize="50" Foreground="White" Margin="7.5,0,0,0" 
+                                                       HorizontalAlignment="Left" VerticalAlignment="Center">
                                                 <TextBlock.Style>
                                                     <Style TargetType="TextBlock">
                                                         <Setter Property="Visibility" Value="Collapsed"/>
                                                         <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding ElementName=LogoImageModifier, Path=ActualHeight}" Value="0">
-                                                                <Setter Property="Visibility" Value="Visible"/>
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding ElementName=LogoImageModifier, Path=ActualHeight}" Value="">
-                                                                <Setter Property="Visibility" Value="Visible"/>
-                                                            </DataTrigger>
-                                                        </Style.Triggers>
-                                                    </Style>
-                                                </TextBlock.Style>
-                                            </TextBlock>
-                                        </Grid>
-                                        
-                                        <Grid Tag="{DynamicResource DKGThemeModifierPath}">
-                                            <Grid.Style>
-                                               <Style TargetType="Grid">
-                                                   <Setter Property="Visibility" Value="Visible"/>
-                                                   <Style.Triggers>
-                                                       <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value=".">
-                                                           <Setter Property="Visibility" Value="Collapsed"/>
-                                                       </DataTrigger>
-                                                   </Style.Triggers>
-                                               </Style>
-                                            </Grid.Style>
-                                            <TextBlock Text="&#59633;" FontFamily="Segoe MDL2 Assets" FontSize="50" Foreground="White" Margin="7.5,0,0,0" 
-                                                       HorizontalAlignment="Center" VerticalAlignment="Center">
-                                                <TextBlock.Style>
-                                                    <Style TargetType="TextBlock">
-                                                        <Setter Property="Visibility" Value="Collapsed"/>
-                                                        <Style.Triggers>
-                                                            <DataTrigger Binding="{Binding ElementName=LogoImageModifier, Path=ActualHeight}" Value="0">
-                                                                <Setter Property="Visibility" Value="Visible"/>
-                                                            </DataTrigger>
-                                                            <DataTrigger Binding="{Binding ElementName=LogoImageModifier, Path=ActualHeight}" Value="">
+                                                            <DataTrigger Binding="{Binding ElementName=FilterIcon, Path=Source}" Value="{x:Null}">
                                                                 <Setter Property="Visibility" Value="Visible"/>
                                                             </DataTrigger>
                                                         </Style.Triggers>

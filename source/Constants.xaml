@@ -76,7 +76,10 @@
 
     <SolidColorBrush x:Key="BottomBarBackgroundBrush" Color="#2D2D2D"/>
 
-    <SolidColorBrush x:Key="OverlayMenuBackgroundBrush" Color="#F2000000"/>
+    <LinearGradientBrush x:Key="OverlayMenuBackgroundBrush" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#323232" Offset="0"/>
+        <GradientStop Color="#2D2D2D" Offset="0.5"/>
+    </LinearGradientBrush>
 
     <SolidColorBrush x:Key="SelectionBrush" Color="#FF93FAF7"/>
 

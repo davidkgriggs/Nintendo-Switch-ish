@@ -6,3 +6,9 @@ Packages:
     PackageUrl: https://github.com/davidkgriggs/Nintendo-Switch-ish/releases/download/v1.0.0/Nintendo_Switch-ish_0d020ed5-0f3c-4c1a-bf9a-c983ef7d74b7_1_0_0.pthm
     Changelog:
       - Initial release
+  - Version: 2.0.0
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-10-27
+    PackageUrl: https://github.com/davidkgriggs/Nintendo-Switch-ish/releases/download/v2.0.0/Nintendo_Switch-ish_0d020ed5-0f3c-4c1a-bf9a-c983ef7d74b7_2_0_0.pthm
+    Changelog:
+      - Rebuilt for Playnite 10
