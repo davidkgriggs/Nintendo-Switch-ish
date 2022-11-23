@@ -10,6 +10,12 @@ Nintendo Switch-ish is a Theme for Playnite that emulates the Nintendo Switch UI
 ![](https://raw.githubusercontent.com/davidkgriggs/Nintendo-Switch-ish/main/Media/screenshot_02.jpg)
 ![](https://raw.githubusercontent.com/davidkgriggs/Nintendo-Switch-ish/main/Media/screenshot_03.jpg)
 
+### Plugins Supported:
+* DKG Theme Modifier
+* Extra Metadata Loader
+* Extra Metadata Fullscreen Mode Helper
+* SuccessStory
+
 See the Playnite Forum thread at: https://playnite.link/forum/thread-1189.html
 
 Please support the Main Playnite Project: https://www.patreon.com/playnite
